@@ -33,6 +33,7 @@ public class someClass {
         System.out.println("Value of Double double is " + newdata.getY_6());
         System.out.println("Value of Character variable is " + newdata.getY_7());
         System.out.println("Value of Boolean variable is " + newdata.getItFalse());
+        System.out.println("Value of String variable is " + newdata.getStr());
         // Вторая часть программы
     }
 }
@@ -74,8 +75,17 @@ public class someClass {
     public static  Double y_6 = 3.15151515d;
     public static Character y_7 = 'b';
     public static Boolean isItFalse = false;
+    public static String str = "Привет тому, кто это читает :)";
 
-    public byte getX_1() {
+        public static String getStr() {
+            return str;
+        }
+
+        public static void setStr(String str) {
+            SpeedData.str = str;
+        }
+
+        public byte getX_1() {
         return x_1;
     }
 
