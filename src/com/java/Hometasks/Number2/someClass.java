@@ -16,11 +16,25 @@ public class someClass {
         Boolean abc = false;
         short jj = 12;
         exs = ex;
-        System.out.println(ex);
+        System.out.println("Value of byte variable is " + mycar.getX_1());
+        System.out.println("Value of short variable is " + mycar.getX_2());
+        System.out.println("Value of int variable is " + mycar.getX_3());
+        System.out.println("Value of long variable is " + mycar.getX_4());
+        System.out.println("Value of float variable is " + mycar.getX_5());
+        System.out.println("Value of double variable is " + mycar.getX_6());
+        System.out.println("Value of char variable is " + mycar.getX_7());
+        System.out.println("Value of boolean variable is " + mycar.isItTrue());
+        System.out.println("Value of Byte variable is " + mycar.getY_1());
+        System.out.println("Value of Short variable is " + mycar.getY_2());
+        System.out.println("Value of Integer variable is " + mycar.getY_3());
+        System.out.println("Value of Long variable is " + mycar.getY_4());
+        System.out.println("Value of Float variable is " + mycar.getY_5());
+        System.out.println("Value of Double double is " + mycar.getY_6());
+        System.out.println("Value of Character variable is " + mycar.getY_7());
+        System.out.println("Value of Boolean variable is " + mycar.getItFalse());
         // Вторая часть программы
     }
 }
-
     class SpeedData {
 
     private float distance_km;
@@ -187,23 +201,5 @@ public class someClass {
     public void setItFalse(Boolean itFalse) {
         isItFalse = itFalse;
     }      // Вторая часть программы
-    public static void Variables () {
-        System.out.println("Value of byte variable is " + x_1);
-        System.out.println("Value of short variable is " + x_2);
-        System.out.println("Value of int variable is " + x_3);
-        System.out.println("Value of long variable is " + x_4);
-        System.out.println("Value of float variable is " + x_5);
-        System.out.println("Value of double variable is " + x_6);
-        System.out.println("Value of char variable is " + x_7);
-        System.out.println("Value of boolean variable is " + isItTrue);
-        System.out.println("Value of Byte variable is " + y_1);
-        System.out.println("Value of Short variable is " + y_2);
-        System.out.println("Value of Integer variable is " + y_3);
-        System.out.println("Value of Long variable is " + y_4);
-        System.out.println("Value of Float variable is " + y_5);
-        System.out.println("Value of Double double is " + y_6);
-        System.out.println("Value of Character variable is " + y_7);
-        System.out.println("Value of Boolean variable is " + isItFalse);
-    }
 }
 
