@@ -5,6 +5,7 @@ public class someClass {
     private static Integer exs = 450;
 
     public static void main(String[] args) {
+        SpeedData newdata = new SpeedData();
         SpeedData mycar = new SpeedData();
         mycar.setDistance_km(20.5f);
         mycar.setTime_hours(2.3f);
@@ -16,22 +17,22 @@ public class someClass {
         Boolean abc = false;
         short jj = 12;
         exs = ex;
-        System.out.println("Value of byte variable is " + mycar.getX_1());
-        System.out.println("Value of short variable is " + mycar.getX_2());
-        System.out.println("Value of int variable is " + mycar.getX_3());
-        System.out.println("Value of long variable is " + mycar.getX_4());
-        System.out.println("Value of float variable is " + mycar.getX_5());
-        System.out.println("Value of double variable is " + mycar.getX_6());
-        System.out.println("Value of char variable is " + mycar.getX_7());
-        System.out.println("Value of boolean variable is " + mycar.isItTrue());
-        System.out.println("Value of Byte variable is " + mycar.getY_1());
-        System.out.println("Value of Short variable is " + mycar.getY_2());
-        System.out.println("Value of Integer variable is " + mycar.getY_3());
-        System.out.println("Value of Long variable is " + mycar.getY_4());
-        System.out.println("Value of Float variable is " + mycar.getY_5());
-        System.out.println("Value of Double double is " + mycar.getY_6());
-        System.out.println("Value of Character variable is " + mycar.getY_7());
-        System.out.println("Value of Boolean variable is " + mycar.getItFalse());
+        System.out.println("Value of byte variable is " + newdata.getX_1());
+        System.out.println("Value of short variable is " + newdata.getX_2());
+        System.out.println("Value of int variable is " + newdata.getX_3());
+        System.out.println("Value of long variable is " + newdata.getX_4());
+        System.out.println("Value of float variable is " + newdata.getX_5());
+        System.out.println("Value of double variable is " + newdata.getX_6());
+        System.out.println("Value of char variable is " + newdata.getX_7());
+        System.out.println("Value of boolean variable is " + newdata.isItTrue());
+        System.out.println("Value of Byte variable is " + newdata.getY_1());
+        System.out.println("Value of Short variable is " + newdata.getY_2());
+        System.out.println("Value of Integer variable is " + newdata.getY_3());
+        System.out.println("Value of Long variable is " + newdata.getY_4());
+        System.out.println("Value of Float variable is " + newdata.getY_5());
+        System.out.println("Value of Double double is " + newdata.getY_6());
+        System.out.println("Value of Character variable is " + newdata.getY_7());
+        System.out.println("Value of Boolean variable is " + newdata.getItFalse());
         // Вторая часть программы
     }
 }
