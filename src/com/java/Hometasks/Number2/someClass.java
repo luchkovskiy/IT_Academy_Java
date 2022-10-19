@@ -17,7 +17,6 @@ public class someClass {
         boolean xyz = true;
         Boolean abc = false;
         short jj = 12;
-        jj = ex;  //Ну вот тут выдает ошибки конвертации, УДАЛИТЕ и программа запустится (поэкспериментировал)
         exs = ex;
         System.out.println(ex);
         // Вторая часть программы
