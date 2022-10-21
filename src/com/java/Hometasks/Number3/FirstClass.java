@@ -4,8 +4,8 @@ package com.java.Hometasks.Number3;
 
 public class FirstClass {
     public static void main(String[] args) {
-        int firstColor = 0;  // Именно в эти 2 переменные вписываются номера цветов, сверху порядок нумерации
-        int secondColor = 2;
+        int firstColor = 9;  // Именно в эти 2 переменные вписываются номера цветов, сверху порядок нумерации
+        int secondColor = 6;
         Rainbow.printColor(firstColor, secondColor);
     }
 }
@@ -54,7 +54,7 @@ class Rainbow {
     }
 
     private static String FinalChoose(int colorNumber) {
-        String answer = "Smth";
+        String answer = "unknown";
         switch (colorNumber) {
             case 1:
                 answer = "red";
