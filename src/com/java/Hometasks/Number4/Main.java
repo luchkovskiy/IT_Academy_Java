@@ -88,19 +88,15 @@ class Cat {
             System.out.println(dataCat.toString());
         }
     }
-
     public static String getCat_name() {
         return cat_name;
     }
-
     public static void setCat_name(String cat_name) {
         Cat.cat_name = cat_name;
     }
-
     public static int getCat_age() {
         return cat_age;
     }
-
     public static void setCat_age(int cat_age) {
         Cat.cat_age = cat_age;
     }
