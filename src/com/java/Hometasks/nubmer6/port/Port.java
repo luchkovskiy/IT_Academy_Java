@@ -41,6 +41,10 @@ public class Port {
         for (int i = 0; i < totalShipArray.length - 1; i++) {
             totalWaterMass += totalShipArray[i];
         }
+        printPortResults(currentWaterMass, totalWaterMass);
+    }
+
+    private void printPortResults(int currentWaterMass, int totalWaterMass) {
         System.out.println("Total number of arriving ships (per day) - " + totalShipCounter);
         System.out.println("Number of remaining ships - " + currentShipCounter);
         System.out.println("Number of left ships - " + (totalShipCounter - currentShipCounter));
