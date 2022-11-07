@@ -7,6 +7,7 @@ public class Ship {
     double totalWaterMass = 0;
 
     public int getShipWaterMass() {
+        totalWaterMass = 0;
         int type = getContainerPlacingType();
         if (type == 1) {
             totalWaterMass = getWaterMassForFirstPlacingType(type);

@@ -27,28 +27,36 @@ public class Port {
         int totalWaterMass = 0;
         for (int i = 0; i < maxShipCount; i++) {
             if (shipDeleteOrStay() == 1) {
-                currentShipArray[i] = ship.getShipWaterMass();
                 totalShipArray[i] = ship.getShipWaterMass();
+                currentShipArray[i] = totalShipArray[i];
                 currentShipCounter++;
             } else {
                 totalShipArray[i] = ship.getShipWaterMass();
             }
             totalShipCounter++;
         }
-        for (int i = 0; i < currentShipArray.length - 1; i++) {
-            currentWaterMass += currentShipArray[i];
+        for (int k : currentShipArray) {
+            currentWaterMass += k;
         }
-        for (int i = 0; i < totalShipArray.length - 1; i++) {
+        for (int i = 0; i < totalShipArray.length ; i++) {
+            int j = i+1;
             totalWaterMass += totalShipArray[i];
+            if (currentShipArray[i] == 0) {
+                System.out.println("Ship number " + j + " " + "(left)\n" + totalShipArray[i] + " m^3");
+                continue;
+            }
+             System.out.println("Ship number " + j + " " + "(remaining)\n" + totalShipArray[i] + " m^3");
         }
         printPortResults(currentWaterMass, totalWaterMass);
     }
 
     private void printPortResults(int currentWaterMass, int totalWaterMass) {
+        int leftWaterMass = totalWaterMass-currentWaterMass;
         System.out.println("Total number of arriving ships (per day) - " + totalShipCounter);
         System.out.println("Number of remaining ships - " + currentShipCounter);
         System.out.println("Number of left ships - " + (totalShipCounter - currentShipCounter));
         System.out.println("Total amount of water in the port (per day) is " + totalWaterMass + " m^3");
+        System.out.println("Amount of water for left ships in the port is " + leftWaterMass + " m^3");
         System.out.println("Current amount of water in the port is " + currentWaterMass + " m^3");
     }
 
@@ -56,5 +64,4 @@ public class Port {
         int[] variantArray = {1, 2};
         return variantArray[rand.nextInt(variantArray.length)];
     }
-
 }
