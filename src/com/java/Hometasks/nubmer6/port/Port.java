@@ -4,7 +4,7 @@ import com.java.Hometasks.nubmer6.ship.Ship;
 
 import java.util.Random;
 
-public class Port {
+public class Port extends Ship {
     Random rand = new Random();
     int currentShipCounter = 0;
     int totalShipCounter = 0;
@@ -15,43 +15,41 @@ public class Port {
     }
 
     public void startThePort() {
-        Ship ship = new Ship();
-        mainPortJob(ship);
-
+        mainPortJob();
     }
 
-    private void mainPortJob(Ship ship) {
+    private void mainPortJob() {
         int[] currentShipArray = new int[10];
         int[] totalShipArray = new int[10];
         int currentWaterMass = 0;
         int totalWaterMass = 0;
         for (int i = 0; i < maxShipCount; i++) {
             if (shipDeleteOrStay() == 1) {
-                totalShipArray[i] = ship.getShipWaterMass();
+                totalShipArray[i] = getShipWaterMass();
                 currentShipArray[i] = totalShipArray[i];
                 currentShipCounter++;
             } else {
-                totalShipArray[i] = ship.getShipWaterMass();
+                totalShipArray[i] = getShipWaterMass();
             }
             totalShipCounter++;
         }
         for (int k : currentShipArray) {
             currentWaterMass += k;
         }
-        for (int i = 0; i < totalShipArray.length ; i++) {
-            int j = i+1;
+        for (int i = 0; i < totalShipArray.length; i++) {
+            int j = i + 1;
             totalWaterMass += totalShipArray[i];
             if (currentShipArray[i] == 0) {
                 System.out.println("Ship number " + j + " " + "(left)\n" + totalShipArray[i] + " m^3");
                 continue;
             }
-             System.out.println("Ship number " + j + " " + "(remaining)\n" + totalShipArray[i] + " m^3");
+            System.out.println("Ship number " + j + " " + "(remaining)\n" + totalShipArray[i] + " m^3");
         }
         printPortResults(currentWaterMass, totalWaterMass);
     }
 
     private void printPortResults(int currentWaterMass, int totalWaterMass) {
-        int leftWaterMass = totalWaterMass-currentWaterMass;
+        int leftWaterMass = totalWaterMass - currentWaterMass;
         System.out.println("Total number of arriving ships (per day) - " + totalShipCounter);
         System.out.println("Number of remaining ships - " + currentShipCounter);
         System.out.println("Number of left ships - " + (totalShipCounter - currentShipCounter));

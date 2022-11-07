@@ -1,8 +1,10 @@
 package com.java.Hometasks.nubmer6.container;
 
+import com.java.Hometasks.nubmer6.water.Water;
+
 import java.util.Random;
 
-public class Container {
+public class Container extends Water {
     Random rand = new Random();
     final double pi = Math.PI;
     String[] form = {"Cylinder", "Cube", "Cone"};

@@ -1,14 +1,11 @@
 package com.java.Hometasks.nubmer6.deck;
 
 import com.java.Hometasks.nubmer6.container.Container;
-import com.java.Hometasks.nubmer6.water.Water;
 
 import java.util.Random;
 
-public class Deck {
+public class Deck extends Container {
     Random rand = new Random();
-    Container container = new Container();
-    Water water = new Water();
     String[] type = {"single-deck", "two-deck"};
 
     public String getDeckType() {
@@ -16,8 +13,8 @@ public class Deck {
     }
 
     public double getContainerWaterMass(int i) {
-        double containerVolume = container.getContainerWaterVolume(i);
-        int waterDensity = water.getWaterDensity();
+        double containerVolume = getContainerWaterVolume(i);
+        int waterDensity = getWaterDensity();
         return containerVolume * waterDensity / 1000000;
 
     }
