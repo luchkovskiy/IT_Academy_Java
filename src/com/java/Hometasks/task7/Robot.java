@@ -5,8 +5,8 @@ public class Robot {
     BodyFactory body = new BodyFactory();
     HeadFactory head = new HeadFactory();
 
-    public int x = 0;
-    String[] robotName = {"Вася", "Петя", "Маша", "Коля", "Степан", "Леонид", "Валера", "Даша", "Артур"};
+    private int x = 0;
+    private final String[] robotName = {"Вася", "Петя", "Маша", "Коля", "Степан", "Леонид", "Валера", "Даша", "Артур"};
 
     public void createRobot() {
         int i;

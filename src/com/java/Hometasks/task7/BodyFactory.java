@@ -1,7 +1,7 @@
 package com.java.Hometasks.task7;
 
 public class BodyFactory implements FactoryOperation {
-    BodyType body;
+    private BodyType body;
 
     @Override
     public void createRobotPart(int i) {

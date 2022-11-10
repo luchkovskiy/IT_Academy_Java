@@ -16,6 +16,5 @@ public class Deck extends Container {
         double containerVolume = getContainerWaterVolume(i);
         int waterDensity = getWaterDensity();
         return containerVolume * waterDensity / 1000000;
-
     }
 }

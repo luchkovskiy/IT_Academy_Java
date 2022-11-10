@@ -1,7 +1,7 @@
 package com.java.Hometasks.task7;
 
 public class HeadFactory implements FactoryOperation {
-    HeadType head;
+    private HeadType head;
 
     @Override
     public void createRobotPart(int j) {
