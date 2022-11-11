@@ -2,8 +2,8 @@ package com.java.Hometasks.task7;
 
 
 public class Robot {
-    BodyFactory body = new BodyFactory();
-    HeadFactory head = new HeadFactory();
+    BodyFactory bodyFactory = new BodyFactory();
+    HeadFactory headFactory = new HeadFactory();
 
     private int x = 0;
     private final String[] robotName = {"Вася", "Петя", "Маша", "Коля", "Степан", "Леонид", "Валера", "Даша", "Артур"};
@@ -15,20 +15,19 @@ public class Robot {
             for (j = 0; j < 3; j++) {
                 System.out.println("Параметры робота " + "по имени " + robotName[x] + ":");
                 x++;
-                createBody(i);
-                createHead(j);
+                System.out.println(createBody(i));
+                System.out.println(createHead(j));
             }
         }
     }
 
-    private void createBody(int i) {
-        body.createRobotPart(i);
-        System.out.println(body);
+    private BodyType createBody(int i) {
+        return bodyFactory.createRobotPart(i);
     }
 
-    private void createHead(int j) {
-        head.createRobotPart(j);
-        System.out.println(head);
+    private HeadType createHead(int j) {
+        return headFactory.createRobotPart(j);
     }
+
 
 }

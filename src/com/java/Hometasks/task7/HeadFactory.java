@@ -4,7 +4,7 @@ public class HeadFactory implements FactoryOperation {
     private HeadType head;
 
     @Override
-    public void createRobotPart(int j) {
+    public HeadType createRobotPart(int j) {
         switch (j) {
             case 0:
                 head = HeadType.CIRCLE;
@@ -18,10 +18,6 @@ public class HeadFactory implements FactoryOperation {
             default:
                 System.out.println("Ошибка в HeadFactory");
         }
-    }
-
-    @Override
-    public String toString() {
-        return "Голова - " + head.getTitle() + "\n";
+        return head;
     }
 }

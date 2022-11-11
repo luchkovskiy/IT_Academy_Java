@@ -7,11 +7,12 @@ public enum HeadType {
 
     private final String title;
 
-    public String getTitle() {
-        return title;
-    }
-
     HeadType(String title) {
         this.title = title;
+    }
+
+    @Override
+    public String toString() {
+        return "Голова - " + title + "\n";
     }
 }

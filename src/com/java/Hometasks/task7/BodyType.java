@@ -7,11 +7,12 @@ public enum BodyType {
 
     private final String title;
 
-    public String getTitle() {
-        return title;
-    }
-
     BodyType(String title) {
         this.title = title;
+    }
+
+    @Override
+    public String toString() {
+        return "Тело - " + title;
     }
 }

@@ -4,7 +4,7 @@ public class BodyFactory implements FactoryOperation {
     private BodyType body;
 
     @Override
-    public void createRobotPart(int i) {
+    public BodyType createRobotPart(int i) {
         switch (i) {
             case 0:
                 body = BodyType.OVAL;
@@ -18,10 +18,6 @@ public class BodyFactory implements FactoryOperation {
             default:
                 System.out.println("Ошибка в BodyFactory");
         }
-    }
-
-    @Override
-    public String toString() {
-        return "Тело - " + body.getTitle();
+        return body;
     }
 }
