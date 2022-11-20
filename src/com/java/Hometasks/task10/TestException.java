@@ -9,7 +9,7 @@ public class TestException {
 
         int i;
         i = random.nextInt(150);
-        i = i / useZero(i);
+        i = i / useDifferentWay(i);
         try {
             checkException(i);
         } catch (MyException e) {
@@ -19,7 +19,7 @@ public class TestException {
         }
     }
 
-    private int useZero(int i) {
+    private int useDifferentWay(int i) {
         int someNull = random.nextInt(5) + 1;
         return someNull == 1 ? i : 1;
     }
