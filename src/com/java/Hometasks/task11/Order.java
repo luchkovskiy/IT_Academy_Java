@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class Order implements Actions {
 
-    Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
     private String identifier;
     private List<String> productList = new ArrayList<>();
     private String orderDate;
